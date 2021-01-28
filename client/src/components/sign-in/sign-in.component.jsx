@@ -9,7 +9,7 @@ import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actio
 import { SignInContainer, SignInTitle, ButtonsBarContainer } from './sign-in.styles';
 
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {
-	const [ userCredentials, setCredentials ] = useState({
+	const [userCredentials, setCredentials] = useState({
 		email: '',
 		password: ''
 	});
@@ -50,6 +50,11 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 					</CustomButton>
 				</ButtonsBarContainer>
 			</form>
+			<br />
+			<p style={{ fontSize: 19 }}>
+				Sample User Login:
+				john@example.com / password: 123456
+			</p>
 		</SignInContainer>
 	);
 };
