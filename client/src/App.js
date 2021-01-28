@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 import { GlobalStyle } from './global.styles';
 
@@ -22,13 +25,14 @@ const App = ({ checkUserSession, currentUser }) => {
 		() => {
 			checkUserSession();
 		},
-		[ checkUserSession ]
+		[checkUserSession]
 	);
 
 	return (
 		<div>
 			<GlobalStyle />
 			<Header />
+			<ToastContainer />
 			<Switch>
 				<ErrorBoundary>
 					<Suspense fallback={<Spinner />}>

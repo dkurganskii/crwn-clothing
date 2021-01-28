@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { toast } from "react-toastify";
 
 import { addItem } from '../../redux/cart/cart.actions';
 
@@ -22,7 +23,7 @@ const CollectionItem = ({ item, addItem }) => {
 				<NameContainer>{name}</NameContainer>
 				<PriceContainer>{price}</PriceContainer>
 			</CollectionFooterContainer>
-			<AddButton onClick={() => addItem(item)} inverted>
+			<AddButton onClick={() => addItem(item) && toast.success("Item Added", { position: "top-center" })} inverted>
 				Add to cart
 			</AddButton>
 		</CollectionItemContainer>
