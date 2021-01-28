@@ -9,7 +9,7 @@ import { signUpStart } from '../../redux/user/user.actions';
 import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
 const SignUp = ({ signUpStart }) => {
-	const [ userCredentials, setUserCredentials ] = useState({
+	const [userCredentials, setUserCredentials] = useState({
 		displayName: '',
 		email: '',
 		password: '',
@@ -37,7 +37,7 @@ const SignUp = ({ signUpStart }) => {
 
 	return (
 		<SignUpContainer>
-			<SignUpTitle>I do not have a account</SignUpTitle>
+			<SignUpTitle>I do not have an account</SignUpTitle>
 			<span>Sign up with your email and password</span>
 			<form className="sign-up-form" onSubmit={handleSubmit}>
 				<FormInput

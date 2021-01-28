@@ -21,12 +21,12 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
 			<OptionLink to="/">HOME</OptionLink>
 			<OptionLink to="/shop">SHOP</OptionLink>
 			{currentUser ? (
-				<OptionLink as="div" onClick={signOutStart}>
+				<OptionLink as="div" onClick={signOutStart} >
 					SIGN OUT
 				</OptionLink>
 			) : (
-				<OptionLink to="/signin">SIGN IN</OptionLink>
-			)}
+					<OptionLink to="/signin">SIGN IN</OptionLink>
+				)}
 			<CartIcon />
 		</OptionsContainer>
 		{hidden ? null : <CartDropdown />}

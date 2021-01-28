@@ -1,4 +1,5 @@
 import UserActionTypes from './user.types';
+import { toast } from "react-toastify";
 
 export const googleSignInStart = () => ({
 	type: UserActionTypes.GOOGLE_SIGN_IN_START
@@ -24,7 +25,9 @@ export const checkUserSession = () => ({
 });
 
 export const signOutStart = () => ({
-	type: UserActionTypes.SIGN_OUT_START
+	type: UserActionTypes.SIGN_OUT_START,
+	toast: toast.success("Logged Out", { position: "top-center" })
+
 });
 
 export const signOutSuccess = () => ({
