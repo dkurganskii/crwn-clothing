@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { toast } from "react-toastify";
 
 import { addItem } from '../../redux/cart/cart.actions';
-
 import {
 	CollectionItemContainer,
 	CollectionFooterContainer,
